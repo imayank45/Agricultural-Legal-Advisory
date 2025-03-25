@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisan Legal Sahayak</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Kisan Legal Sahayak</h1>
+            <p>Your AI-powered assistant for understanding land purchase agreements</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Upload Your Land Agreement</h2>
+            <div class="upload-container">
+                <form id="contractForm" enctype="multipart/form-data" method="POST" action="/analyze">
+                    <input type="file" id="contractFile" name="contract" accept=".pdf" required>
+                    <button type="submit">Analyze Document</button>
+                </form>
+            </div>
+            <div id="results" class="results-container"></div>
+        </section>
+
+        <section class="language-section">
+            <h2>Choose Language for Summary</h2>
+            <select id="languageSelect">
+                {% for code, name in languages.items() %}
+                    <option value="{{ code }}">{{ name }}</option>
+                {% endfor %}
+            </select>
+            <button onclick="translateAndSpeak()" id="speakButton" >Listen to Summary</button>
+            <div id="translatedSummary" class="translated-summary"></div>
+            <audio id="audioPlayer" controls style="display: none;"></audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kisan Legal Sahayak. All rights reserved.</p>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
