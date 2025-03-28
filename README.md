@@ -6,7 +6,7 @@ Agricultural-Legal-Advisory is a web-based application designed to provide legal
 ## Features
 - Provides legal summaries related to agricultural laws
 - User-friendly web interface
-- Supports querying legal documents
+- Supports querying legal documents 
 - Fast and efficient processing
 
 ## Prerequisites
