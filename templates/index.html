@@ -32,7 +32,9 @@
             <h2>Choose Language for Summary</h2>
             <select id="languageSelect">
                 {% for code, name in languages.items() %}
-                    <option value="{{ code }}">{{ name }}</option>
+                    {% if code in ["hi", "bn", "ta", "te", "mr", "gu", "pa", "ur", "kn", "ml", "or", "as", "sd", "ks", "ne", "kok", "mai", "mni", "brx", "sat", "doi"] %}
+                        <option value="{{ code }}">{{ name }}</option>
+                    {% endif %}
                 {% endfor %}
             </select>
             <button onclick="translateAndSpeak()" id="speakButton" >Listen to Summary</button>

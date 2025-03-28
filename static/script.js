@@ -35,12 +35,13 @@ document.getElementById("contractForm").addEventListener("submit", async functio
             <div class="result-section">
                 <h3 onclick="toggleSection('risks')">Risky Clauses <span class="toggle-icon">▼</span></h3>
                 <div id="risks" class="content">
-                    ${result.risks.map((risk, index) => `
-                        <div class="risk-item ${risk.risk === 'SAFE' ? 'safe' : 'risky'}">
-                            <p><strong>Clause ${index + 1}:</strong> ${risk.clause}</p>
-                            <p><strong>Risk:</strong> ${risk.risk} (Score: ${risk.score.toFixed(4)})</p>
-                        </div>
-                    `).join('')}
+                ${result.risks.map((risk, index) => `
+                    <div class="risk-item ${risk.risk === 'SAFE' ? 'safe' : 'risky'}">
+                        <p><strong>Clause ${index + 1}:</strong> ${risk.clause}</p>
+                        <p><strong>Risk:</strong> ${risk.risk} (Score: ${risk.score.toFixed(4)})</p>
+                        <p><strong>Page:</strong> ${risk.page ? risk.page : 'Unknown'}</p>
+                    </div>
+                `).join('')}
                 </div>
             </div>
             <div class="result-section">
