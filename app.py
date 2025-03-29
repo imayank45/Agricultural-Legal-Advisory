@@ -6,7 +6,7 @@ from summarization import summarize_contract
 from risk_analysis import classify_risk, extract_clauses
 from translation import translate_text, get_supported_languages
 from tts import text_to_speech
-
+ 
 # Initialize Flask app
 app = Flask(__name__)
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), "uploads")
