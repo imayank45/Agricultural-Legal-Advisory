@@ -52,13 +52,7 @@ Follow these steps to set up and run the application:
 7. **Access the Application**
    - After running the application, click on the localhost URL displayed in the terminal to open the application in your browser.
 
-## Contributing
-Contributions are welcome! Follow these steps to contribute:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes and commit (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a Pull Request.
+
 
 ## License
 This project is licensed under the MIT License.
